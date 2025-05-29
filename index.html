@@ -509,7 +509,7 @@
         justify-content: center;
         gap: 2rem;
         row-gap: 8rem;
-        margin: 0 2.5rem;
+        margin: 0 rem;
       }
 
       .student-card {
@@ -544,7 +544,7 @@
         padding: 0.5rem;
         text-align: center;
         border-radius: 0.75rem;
-        width: 6rem;
+        width: 6.5rem;
         gap: 0.25rem;
         z-index: 10;
         min-height: 4rem;
@@ -972,179 +972,192 @@
         }
       }
       /*alumni crausel*/
-      .alumni-container {
-        background-color: white;
-        padding: 48px 16px;
-        text-align: center;
-        position: relative;
-      }
+.alumni-testimonial-carousel-container {
+  padding: 48px 16px;
+  text-align: center;
+  margin-top: 40px;
+}
 
-      .alumni-title {
-        font-size: 1.875rem;
-        font-weight: bold;
-        color: #1e3a8a;
-        margin-bottom: 104px;
-      }
 
-      .carousel-wrapper {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        height: 500px;
-        touch-action: pan-y;
-      }
-
-      .alumni-card {
-        position: absolute;
-        transition: transform 0.3s ease, z-index 0.3s ease;
-        width: 256px;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        border: 1px solid #e5e7eb;
-        cursor: grab;
-      }
-
-      .alumni-card:active {
-        cursor: grabbing;
-      }
-
-      .alumni-card.center {
-        z-index: 50;
-      }
-
-      .card-header {
-        border: 1px solid #073763;
-        margin-top: 12px;
-      }
-
-      .card-title {
-        color: #073763;
-        font-size: 1.25rem;
-        font-weight: bold;
-        padding: 8px 0;
-        text-align: center;
-      }
-
-      .image-container {
-        position: relative;
-        height: 240px;
-        width: 100%;
-        background-color: #e5e7eb;
-      }
-
-      .alumni-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 50%;
-        display: flex;
-        padding: 12px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-          0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        border: none;
-        cursor: pointer;
-      }
-
-      .play-icon {
-        width: 24px;
-        height: 24px;
-      }
-
-      .card-content {
-        padding: 16px;
-        text-align: center;
-      }
-
-      .alumni-name {
-        font-weight: 600;
-        color: #073763;
-        font-size: 0.875rem;
-        margin-bottom: 4px;
-      }
-
-      .alumni-title-text {
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: black;
-        margin-bottom: 4px;
-      }
-
-      .alumni-batch {
-        font-weight: 600;
-        color: #073763;
-        margin-top: 4px;
-        font-size: 0.875rem;
-      }
-
-      /* Responsive design */
-      @media (min-width: 640px) {
-        .alumni-container {
-          padding: 48px 24px;
+        .alumni-testimonial-carousel-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 80px;
         }
 
-        .alumni-card {
-          width: 320px;
+        .alumni-testimonial-carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 520px;
         }
 
-        .card-title {
-          font-size: 1.5rem;
+        .alumni-testimonial-card {
+            position: absolute;
+            transition: transform 0.3s ease;
+            width: 256px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
         }
 
-        .image-container {
-          height: 304px;
+.alumni-testimonial-card-header-border {
+  height: 1.5px;
+  width: 100%;
+  background-color: #073763;
+  margin-top: 20px;
+}
+
+
+
+        .alumni-testimonial-card-header-text {
+            color: #073763;
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 8px 0;
+            text-align: center;
         }
 
-        .play-button {
-          padding: 20px;
+        .alumni-testimonial-video-container {
+            height: 240px;
+            width: 100%;
+            background-color: #e5e7eb;
+            position: relative;
         }
 
-        .play-icon {
-          width: 32px;
-          height: 32px;
+        .alumni-testimonial-video-container img,
+        .alumni-testimonial-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .alumni-name,
-        .alumni-batch {
-          font-size: 1rem;
+        .alumni-testimonial-play-button-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .alumni-title-text {
-          font-size: 0.875rem;
+        .alumni-testimonial-play-button {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: flex;
+            padding: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: none;
+            cursor: pointer;
         }
-      }
 
-      /* Navigation dots */
-      .nav-dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 24px;
-        gap: 8px;
-      }
+        .alumni-testimonial-play-button img {
+            width: 24px;
+            height: 24px;
+        }
 
-      .nav-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #d1d5db;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
+        .alumni-testimonial-card-content {
+            padding: 16px;
+            text-align: center;
+        }
 
-      .nav-dot.active {
-        background-color: #073763;
-      }
+        .alumni-testimonial-name {
+            font-weight: 600;
+color: #001f5f;       
+            font-size: 0.875rem;
+        }
+
+        .alumni-testimonial-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: black;
+            margin: 4px 0;
+        }
+
+        .alumni-testimonial-batch {
+            font-weight: 600;
+color: #001f5f;     
+            margin-top: 4px;
+            font-size: 0.875rem;
+        }
+
+        .alumni-testimonial-navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+            gap: 16px;
+        }
+
+        .alumni-testimonial-nav-button {
+            padding: 8px 16px;
+            border-radius: 9999px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .alumni-testimonial-nav-button:hover {
+            background-color: #1e40af;
+        }
+
+        /* Mobile responsive */
+        @media (min-width: 640px) {
+            .alumni-testimonial-carousel-container {
+                padding: 48px 24px;
+            }
+
+            .alumni-testimonial-card {
+                width: 320px;
+            }
+
+            .alumni-testimonial-video-container {
+                height: 304px;
+            }
+
+            .alumni-testimonial-card-header-text {
+                font-size: 1.5rem;
+            }
+
+.alumni-testimonial-name,
+.alumni-testimonial-batch {
+font-size: 1.3rem;       
+font-weight: 700;      
+color: #001f5f;         
+font-family: 'Arial', sans-serif;
+}
+
+
+            .alumni-testimonial-title {
+                font-size: 1.1rem;     
+font-weight: 700;      
+color: #000000;         
+font-family: 'Arial', sans-serif;
+
+            }
+
+            .alumni-testimonial-play-button {
+                padding: 20px;
+            }
+
+            .alumni-testimonial-play-button img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .alumni-testimonial-carousel-container {
+                padding: 48px 32px;
+            }
+        }
       /*testimonial section*/
       .testimonial-container {
         position: relative;
@@ -1201,14 +1214,14 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
           0 2px 4px -1px rgba(0, 0, 0, 0.06);
         padding: 1.5rem;
-        border: 1px solid #e5e7eb;
+        border: 1px solid black !important;
         transition: all 0.3s ease;
         width: 100%;
         max-width: 28rem;
       }
 
       .testimonial-card.featured {
-        font-size: 0.875rem;
+        font-size: 0.785rem;
         width: 350px;
         z-index: 10;
         transform: scaleY(1.25);
@@ -1289,7 +1302,8 @@
         }
 
         .testimonial-card.featured {
-          width: 420px;
+          width: 100%;
+          max-width: 28rem;
         }
       }
 
@@ -1344,7 +1358,6 @@
       }
 
       .newsletter-title {
-        font-size: 1.875rem;
         font-weight: 600;
         color: #073763;
         margin-bottom: 1rem;
@@ -1816,11 +1829,16 @@
         <div class="events-container" id="events-container"></div>
       </div>
       <!-- alumni crausel -->
-      <div class="alumni-container">
-        <h2 class="alumni-title">Video Testimonials</h2>
-        <div class="carousel-wrapper" id="carouselWrapper"></div>
-        <div class="nav-dots" id="navDots"></div>
-      </div>
+        <div class="alumni-testimonial-carousel-container">
+            <h2 class="alumni-testimonial-carousel-title">Video Testimonials</h2>
+            <div class="alumni-testimonial-carousel-wrapper" id="alumniTestimonialCarouselWrapper">
+            </div>
+            
+            <div class="alumni-testimonial-navigation">
+                <button class="alumni-testimonial-nav-button" id="alumniTestimonialPrevBtn">← Prev</button>
+                <button class="alumni-testimonial-nav-button" id="alumniTestimonialNextBtn">Next →</button>
+            </div>
+        </div>
       <!-- testimonial section -->
       <div class="testimonial-container">
         <div class="background-split">
@@ -2287,258 +2305,261 @@
       });
 
       // alumni crausel
-      const alumniData = [
-        {
-          id: 1,
-          name: "Mr. Stevenson",
-          title: "Assistant Vice President",
-          batch: "MMS (BATCH 2016-18)",
-          image: "/public/al1.png",
-        },
-        {
-          id: 2,
-          name: "Mr. Hitesh",
-          title: "Branch Manager",
-          batch: "MMS (BATCH 2016-18)",
-          image: "/public/al2.png",
-        },
-        {
-          id: 3,
-          name: "Mr. Ramandeep Singh Arora",
-          title: "Deputy Manager at the Citi Bank, Mumbai",
-          batch: "PGDM (BATCH 2011-13)",
-          image: "/public/al3.png",
-          featured: true,
-        },
-        {
-          id: 4,
-          name: "Ms. Sakshi Bhatia",
-          title: "Executive",
-          batch: "MMS (BATCH 2016-18)",
-          image: "/public/al4.png",
-          featured: true,
-        },
-        {
-          id: 5,
-          name: "Ms. Kavita Kedar",
-          title: "Executive, Blue Jet Airways Ltd",
-          batch: "MMS (BATCH 2016-18)",
-          image: "/public/al5.png",
-        },
-      ];
-
-      class AlumniCarousel {
-        constructor() {
-          this.currentIndex = 2; // Start with the middle item (featured)
-          this.carouselWrapper = document.getElementById("carouselWrapper");
-          this.navDots = document.getElementById("navDots");
-          this.cards = [];
-          this.isAnimating = false;
-
-          // Touch/swipe properties
-          this.startX = 0;
-          this.currentX = 0;
-          this.isDragging = false;
-          this.threshold = 50; // Minimum distance to trigger swipe
-
-          this.init();
-        }
-
-        init() {
-          this.createCards();
-          this.createNavDots();
-          this.updateCarousel();
-          this.bindEvents();
-        }
-
-        createCards() {
-          alumniData.forEach((alumni, index) => {
-            const card = document.createElement("div");
-            card.className = "alumni-card";
-            card.innerHTML = `
-                        <div class="card-header"></div>
-                        <div class="card-title">ALUMNI INTERACTION</div>
-                        <div class="image-container">
-                            <img src="${alumni.image}" alt="${
-              alumni.name
-            }" class="alumni-image">
-                            ${
-                              alumni.featured
-                                ? `
-                                <button class="play-button">
-                                    <img src="public/play.png" alt="Play" class="play-icon">
-                                </button>
-                            `
-                                : ""
-                            }
-                        </div>
-                        <div class="card-content">
-                            <p class="alumni-name">${alumni.name}</p>
-                            <p class="alumni-title-text">(${alumni.title})</p>
-                            <p class="alumni-batch">${alumni.batch}</p>
-                        </div>
-                    `;
-
-            this.carouselWrapper.appendChild(card);
-            this.cards.push(card);
-          });
-        }
-
-        createNavDots() {
-          alumniData.forEach((_, index) => {
-            const dot = document.createElement("div");
-            dot.className = "nav-dot";
-            dot.addEventListener("click", () => this.goToSlide(index));
-            this.navDots.appendChild(dot);
-          });
-        }
-
-        updateCarousel() {
-          if (this.isAnimating) return;
-
-          this.cards.forEach((card, index) => {
-            const offset =
-              (index - this.currentIndex) *
-              (window.innerWidth < 640 ? 100 : 180);
-            const zIndex =
-              index === this.currentIndex
-                ? 50
-                : 40 - Math.abs(index - this.currentIndex);
-            const scale = index === this.currentIndex ? 1.25 : 1.0;
-
-            card.style.transform = `translateX(${offset}px) scale(${scale})`;
-            card.style.zIndex = zIndex;
-
-            // Add center class for additional styling if needed
-            if (index === this.currentIndex) {
-              card.classList.add("center");
-            } else {
-              card.classList.remove("center");
-            }
-          });
-
-          // Update navigation dots
-          const dots = this.navDots.querySelectorAll(".nav-dot");
-          dots.forEach((dot, index) => {
-            if (index === this.currentIndex) {
-              dot.classList.add("active");
-            } else {
-              dot.classList.remove("active");
-            }
-          });
-        }
-
-        goToSlide(index) {
-          if (this.isAnimating || index === this.currentIndex) return;
-
-          this.isAnimating = true;
-          this.currentIndex = index;
-          this.updateCarousel();
-
-          setTimeout(() => {
-            this.isAnimating = false;
-          }, 300);
-        }
-
-        nextSlide() {
-          const nextIndex = (this.currentIndex + 1) % alumniData.length;
-          this.goToSlide(nextIndex);
-        }
-
-        prevSlide() {
-          const prevIndex =
-            (this.currentIndex - 1 + alumniData.length) % alumniData.length;
-          this.goToSlide(prevIndex);
-        }
-
-        bindEvents() {
-          // Touch events for mobile
-          this.carouselWrapper.addEventListener(
-            "touchstart",
-            (e) => {
-              this.startX = e.touches[0].clientX;
-              this.isDragging = true;
-            },
-            { passive: true }
-          );
-
-          this.carouselWrapper.addEventListener(
-            "touchmove",
-            (e) => {
-              if (!this.isDragging) return;
-              this.currentX = e.touches[0].clientX;
-            },
-            { passive: true }
-          );
-
-          this.carouselWrapper.addEventListener(
-            "touchend",
-            (e) => {
-              if (!this.isDragging) return;
-
-              const diffX = this.startX - this.currentX;
-
-              if (Math.abs(diffX) > this.threshold) {
-                if (diffX > 0) {
-                  this.nextSlide();
-                } else {
-                  this.prevSlide();
+  const AlumniTestimonialCarousel = {
+            alumniTestimonialData: [
+                {
+                    id: 1,
+                    name: "Mr. Stevenson",
+                    title: "Assistant Vice President",
+                    batch: "MMS (BATCH 2016-18)",
+                    video: "/public/video1.mp4",
+                    thumbnail: "/public/al1.png"
+                },
+                {
+                    id: 2,
+                    name: "Mr. Hitesh",
+                    title: "Branch Manager",
+                    batch: "MMS (BATCH 2016-18)",
+                    video: "/public/video1.mp4",
+                    thumbnail: "/public/al2.png"
+                },
+                {
+                    id: 3,
+                    name: "Mr. Ramandeep Singh Arora",
+                    title: "Deputy Manager at the Citi Bank, Mumbai",
+                    batch: "PGDM (BATCH 2011-13)",
+                    video: "/public/video1.mp4",
+                    thumbnail: "/public/al3.png",
+                    featured: true
+                },
+                {
+                    id: 4,
+                    name: "Ms. Sakshi Bhatia",
+                    title: "Executive",
+                    batch: "MMS (BATCH 2016-18)",
+                    video: "/public/video1.mp4",
+                    thumbnail: "/public/al4.png"
+                },
+                {
+                    id: 5,
+                    name: "Ms. Kavita Kedar",
+                    title: "Executive, Blue Jet Airways Ltd",
+                    batch: "MMS (BATCH 2016-18)",
+                    video: "/public/video1.mp4",
+                    thumbnail: "/public/al5.png"
                 }
-              }
+            ],
 
-              this.isDragging = false;
+            // State variables
+            alumniTestimonialStartIndex: 0,
+            alumniTestimonialIsPlaying: false,
+            alumniTestimonialPlayingIndex: -1,
+            alumniTestimonialVideoElements: [],
+            alumniTestimonialStartX: 0,
+            alumniTestimonialIsDragging: false,
+
+            // DOM elements
+            alumniTestimonialCarouselWrapper: null,
+            alumniTestimonialPrevBtn: null,
+            alumniTestimonialNextBtn: null,
+
+            // Get 5 cards to display based on startIndex
+            getAlumniTestimonialVisibleCards() {
+                const cards = [];
+                for (let i = 0; i < 5; i++) {
+                    const dataIndex = (this.alumniTestimonialStartIndex + i) % this.alumniTestimonialData.length;
+                    cards.push(this.alumniTestimonialData[dataIndex]);
+                }
+                return cards;
             },
-            { passive: true }
-          );
 
-          // Mouse events for desktop
-          this.carouselWrapper.addEventListener("mousedown", (e) => {
-            this.startX = e.clientX;
-            this.isDragging = true;
-            e.preventDefault();
-          });
+            // Calculate card offset based on position
+            getAlumniTestimonialCardOffset(cardPosition) {
+                const isMobile = window.innerWidth < 640;
+                return (cardPosition - 2) * (isMobile ? 100 : 180);
+            },
 
-          document.addEventListener("mousemove", (e) => {
-            if (!this.isDragging) return;
-            this.currentX = e.clientX;
-          });
+            // Handle video play
+            handleAlumniTestimonialPlay(cardPosition) {
+                // Pause all other videos
+                this.alumniTestimonialVideoElements.forEach((video, i) => {
+                    if (video && i !== cardPosition) {
+                        video.pause();
+                    }
+                });
+                this.alumniTestimonialIsPlaying = true;
+                this.alumniTestimonialPlayingIndex = cardPosition;
+            },
 
-          document.addEventListener("mouseup", (e) => {
-            if (!this.isDragging) return;
+            // Handle video pause
+            handleAlumniTestimonialPause() {
+                this.alumniTestimonialIsPlaying = false;
+                this.alumniTestimonialPlayingIndex = -1;
+            },
 
-            const diffX = this.startX - this.currentX;
+            // Navigation functions
+            handleAlumniTestimonialPrev() {
+                this.alumniTestimonialStartIndex = this.alumniTestimonialStartIndex > 0 ? this.alumniTestimonialStartIndex - 1 : this.alumniTestimonialData.length - 1;
+                this.alumniTestimonialIsPlaying = false;
+                this.alumniTestimonialPlayingIndex = -1;
+                this.renderAlumniTestimonialCards();
+            },
 
-            if (Math.abs(diffX) > this.threshold) {
-              if (diffX > 0) {
-                this.nextSlide();
-              } else {
-                this.prevSlide();
-              }
+            handleAlumniTestimonialNext() {
+                this.alumniTestimonialStartIndex = (this.alumniTestimonialStartIndex + 1) % this.alumniTestimonialData.length;
+                this.alumniTestimonialIsPlaying = false;
+                this.alumniTestimonialPlayingIndex = -1;
+                this.renderAlumniTestimonialCards();
+            },
+
+            // Create a single card element
+            createAlumniTestimonialCard(alumni, cardPosition) {
+                const card = document.createElement('div');
+                const offset = this.getAlumniTestimonialCardOffset(cardPosition);
+                const isCenter = cardPosition === 2;
+                const zIndex = isCenter ? 50 : 40 - Math.abs(cardPosition - 2);
+                
+                // Set scale based on position
+                let scale;
+                if (cardPosition === 0 || cardPosition === 4) {
+                    scale = 0.8; // far left and far right
+                } else if (cardPosition === 1 || cardPosition === 3) {
+                    scale = 0.9; // left and right
+                } else {
+                    scale = 1.1; // center
+                }
+                
+                card.className = `alumni-testimonial-card alumni-testimonial-position-${cardPosition}`;
+                card.style.transform = `translateX(${offset}px) scale(${scale})`;
+                card.style.zIndex = zIndex;
+
+                const isVideoPlaying = this.alumniTestimonialIsPlaying && this.alumniTestimonialPlayingIndex === cardPosition;
+
+                card.innerHTML = `
+                    <div class="alumni-testimonial-card-header-border"></div>
+                    <div class="alumni-testimonial-card-header-text">ALUMNI INTERACTION</div>
+                    <div class="alumni-testimonial-video-container">
+                        ${isVideoPlaying ? 
+                            `<video 
+                                src="${alumni.video}" 
+                                controls 
+                                autoplay
+                                data-position="${cardPosition}"
+                            ></video>` :
+                            `<img src="${alumni.thumbnail}" alt="${alumni.name}">
+                            ${!isVideoPlaying && isCenter ? 
+                                `<div class="alumni-testimonial-play-button-overlay">
+                                    <button class="alumni-testimonial-play-button" data-position="${cardPosition}">
+                                        <img src="/public/play.png" alt="Play">
+                                    </button>
+                                </div>` : ''
+                            }`
+                        }
+                    </div>
+                    <div class="alumni-testimonial-card-content">
+                        <p class="alumni-testimonial-name">${alumni.name}</p>
+                        <p class="alumni-testimonial-title">(${alumni.title})</p>
+                        <p class="alumni-testimonial-batch">${alumni.batch}</p>
+                    </div>
+                `;
+
+                return card;
+            },
+
+            // Render all cards
+            renderAlumniTestimonialCards() {
+                this.alumniTestimonialCarouselWrapper.innerHTML = '';
+                this.alumniTestimonialVideoElements = [];
+                const visibleCards = this.getAlumniTestimonialVisibleCards();
+
+                visibleCards.forEach((alumni, cardPosition) => {
+                    const card = this.createAlumniTestimonialCard(alumni, cardPosition);
+                    this.alumniTestimonialCarouselWrapper.appendChild(card);
+
+                    // Store video element reference
+                    const video = card.querySelector('video');
+                    if (video) {
+                        this.alumniTestimonialVideoElements[cardPosition] = video;
+                        video.addEventListener('play', () => this.handleAlumniTestimonialPlay(cardPosition));
+                        video.addEventListener('pause', () => this.handleAlumniTestimonialPause());
+                    } else {
+                        this.alumniTestimonialVideoElements[cardPosition] = null;
+                    }
+
+                    // Add play button event listener
+                    const playButton = card.querySelector('.alumni-testimonial-play-button');
+                    if (playButton) {
+                        playButton.addEventListener('click', () => {
+                            this.handleAlumniTestimonialPlay(cardPosition);
+                            this.renderAlumniTestimonialCards(); // Re-render to show video
+                        });
+                    }
+                });
+            },
+
+            // Touch event handlers
+            handleAlumniTestimonialTouchStart(e) {
+                this.alumniTestimonialStartX = e.touches[0].clientX;
+                this.alumniTestimonialIsDragging = true;
+            },
+
+            handleAlumniTestimonialTouchMove(e) {
+                if (!this.alumniTestimonialIsDragging) return;
+                const currentX = e.touches[0].clientX;
+                const diff = this.alumniTestimonialStartX - currentX;
+                
+                if (diff > 50) {
+                    this.handleAlumniTestimonialNext();
+                    this.alumniTestimonialIsDragging = false;
+                } else if (diff < -50) {
+                    this.handleAlumniTestimonialPrev();
+                    this.alumniTestimonialIsDragging = false;
+                }
+            },
+
+            handleAlumniTestimonialTouchEnd() {
+                this.alumniTestimonialIsDragging = false;
+            },
+
+            // Keyboard navigation
+            handleAlumniTestimonialKeyDown(e) {
+                if (e.key === 'ArrowLeft') {
+                    this.handleAlumniTestimonialPrev();
+                } else if (e.key === 'ArrowRight') {
+                    this.handleAlumniTestimonialNext();
+                }
+            },
+
+            // Initialize the carousel
+            initAlumniTestimonialCarousel() {
+                // DOM elements
+                this.alumniTestimonialCarouselWrapper = document.getElementById('alumniTestimonialCarouselWrapper');
+                this.alumniTestimonialPrevBtn = document.getElementById('alumniTestimonialPrevBtn');
+                this.alumniTestimonialNextBtn = document.getElementById('alumniTestimonialNextBtn');
+
+                // Event listeners
+                this.alumniTestimonialPrevBtn.addEventListener('click', () => this.handleAlumniTestimonialPrev());
+                this.alumniTestimonialNextBtn.addEventListener('click', () => this.handleAlumniTestimonialNext());
+                this.alumniTestimonialCarouselWrapper.addEventListener('touchstart', (e) => this.handleAlumniTestimonialTouchStart(e));
+                this.alumniTestimonialCarouselWrapper.addEventListener('touchmove', (e) => this.handleAlumniTestimonialTouchMove(e));
+                this.alumniTestimonialCarouselWrapper.addEventListener('touchend', () => this.handleAlumniTestimonialTouchEnd());
+                window.addEventListener('keydown', (e) => this.handleAlumniTestimonialKeyDown(e));
+
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    this.renderAlumniTestimonialCards();
+                });
+
+                // Initial render
+                this.renderAlumniTestimonialCards();
             }
+        };
 
-            this.isDragging = false;
-          });
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            AlumniTestimonialCarousel.initAlumniTestimonialCarousel();
+        });
 
-          // Keyboard navigation
-          document.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowLeft") {
-              this.prevSlide();
-            } else if (e.key === "ArrowRight") {
-              this.nextSlide();
-            }
-          });
-
-          // Handle window resize
-          window.addEventListener("resize", () => {
-            this.updateCarousel();
-          });
-        }
-      }
-
-      // Initialize carousel when DOM is loaded
-      document.addEventListener("DOMContentLoaded", () => {
-        new AlumniCarousel();
-      });
       //testimonial section
 
       const testimonials = [
