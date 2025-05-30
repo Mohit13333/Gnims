@@ -613,7 +613,15 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
         gap: 1.5rem;
         justify-items: center;
       }
+      @media (max-width: 768px) {
+      .recruiters-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        justify-items: center;
+      }
 
+      }
       .recruiter-item {
         border-radius: 0.75rem;
         width: 7.5rem;
@@ -866,13 +874,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
         text-align: center;
         color: #0e3c60;
         margin-bottom: 3rem;
-      }
-
-      .recruiters-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        justify-items: center;
       }
 
       .recruiter-item {
@@ -1373,7 +1374,28 @@ font-family: 'Arial', sans-serif;
         z-index: 10;
         transform: scaleY(1.25);
       }
+@media (max-width: 430px) {
 
+          .testimonial-card.featured {
+        font-size: 0.65rem;
+        width: 320px;
+        z-index: 10;
+        transform: scaleY(1.25);
+      }
+         .profile-info p {
+        font-size: 0.65rem !important;
+        color: #6b7280 !important;
+      }
+        .content-container {
+        position: relative;
+        z-index: 1;
+        margin: 0 0.5rem;
+        padding: 0 0;
+        padding-bottom: 1rem;
+      }
+
+
+    }
       .testimonial-header {
         display: flex;
         align-items: center;
@@ -1492,7 +1514,7 @@ font-family: 'Arial', sans-serif;
         max-width: 48rem;
         background-color: white;
         text-align: center;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
           0 4px 6px -2px rgba(0, 0, 0, 0.05);
         border-radius: 0.5rem;
         padding: 1.5rem;
@@ -1507,7 +1529,7 @@ font-family: 'Arial', sans-serif;
       .newsletter-title {
         font-weight: 600;
         color: #073763;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       @media (min-width: 1024px) {
