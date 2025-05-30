@@ -381,7 +381,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             padding: 16px;
             width: 100%;
-            max-width: 280px;
+            min-width: 280px;
             margin: 0 auto;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -532,9 +532,48 @@
             background-color: white;
         }
 
-        .hidden {
-            display: none;
-        }
+    /* Add these new styles to your existing CSS */
+.card-content-normal, .card-content-hover {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.card-content-normal {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-content-hover {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.program-card {
+  position: relative;
+  min-height: 200px; /* Adjust based on your content */
+}
+
+.program-card:hover .card-content-normal {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.program-card:hover .card-content-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden {
+  display: block !important; /* Change from display:none to keep layout */
+  opacity: 0;
+  pointer-events: none;
+}
 
         /* Responsive Grid */
         @media (min-width: 640px) {
@@ -2154,19 +2193,19 @@ font-family: 'Arial', sans-serif;
             {
                 icon: "/public/bms.png",
                 title: "BMS",
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque iste veritatis laborum praesentium sequi possimus nostrum tempore atque ipsam sit, in omnis aliquid illo aspernatur. Commodi veniam maiores quidem?",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque iste veritatis laborum praesentium",
                 showDescription: true,
             },
             {
                 icon: "/public/mca.png",
                 title: "MCA",
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque iste veritatis laborum praesentium sequi possimus nostrum tempore atque ipsam sit, in omnis aliquid illo aspernatur. Commodi veniam maiores quidem?",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque iste veritatis laborum praesentium",
                 showDescription: true,
             },
             {
                 icon: "/public/pgdm.png",
                 title: "PGDM",
-                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque iste veritatis laborum praesentium sequi possimus nostrum tempore atque ipsam sit, in omnis aliquid illo aspernatur. Commodi veniam maiores quidem?",
+                description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque iste veritatis laborum praesentium",
                 showDescription: true,
             },
             {
@@ -2248,19 +2287,19 @@ font-family: 'Arial', sans-serif;
             });
         }
 
-        function updateCardDisplay(card) {
-            const cardIndex = parseInt(card.getAttribute('data-card-index'));
-            const normalContent = card.querySelector('.card-content-normal');
-            const hoverContent = card.querySelector('.card-content-hover');
+function updateCardDisplay(card) {
+    const cardIndex = parseInt(card.getAttribute('data-card-index'));
+    const normalContent = card.querySelector('.card-content-normal');
+    const hoverContent = card.querySelector('.card-content-hover');
 
-            if (hoveredCard === cardIndex) {
-                normalContent.classList.add('hidden');
-                hoverContent.classList.remove('hidden');
-            } else {
-                normalContent.classList.remove('hidden');
-                hoverContent.classList.add('hidden');
-            }
-        }
+    if (hoveredCard === cardIndex) {
+        normalContent.classList.add('hidden');
+        hoverContent.classList.remove('hidden');
+    } else {
+        normalContent.classList.remove('hidden');
+        hoverContent.classList.add('hidden');
+    }
+}
 
         function nextSlide() {
             currentIndexofcard = currentIndexofcard + itemsPerPage >= programs.length ? 0 : currentIndexofcard + 1;
