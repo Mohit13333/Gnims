@@ -106,6 +106,7 @@
         margin: 8rem auto 0 auto;
         margin-bottom: 30px;
       }
+      
 
       .about-overlay {
         position: absolute;
@@ -123,6 +124,37 @@
         gap: 1.5rem;
       }
 
+      @media (min-width: 640px) {
+        .about-content {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+         .text-content {
+          padding: 2rem;
+        }
+
+      .about-title {
+        font-size: 1.2rem !important;
+        line-height: 1.7rem !important;
+        font-weight: 700;
+        color: #073763;
+      }
+
+      .about-subtitle {
+        color: #dc2626;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+      .about-description {
+        color: #374151;
+        margin-top: 1rem;
+        font-size: 1rem !important;
+        line-height: 1.75;
+      }
+
+        
+      }
       @media (min-width: 1025px) {
         .about-content {
           flex-direction: row;
@@ -132,6 +164,33 @@
         .about-container {
           margin-left: 9rem;
           margin-right: 9rem;
+          flex-direction: row;
+        }
+        .about-title {
+        font-size: 2rem !important;
+        line-height: 2rem;
+        font-weight: 700;
+        color: #073763;
+      }
+
+      .about-subtitle {
+        color: #dc2626;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+      .about-description {
+        color: #374151;
+        margin-top: 1rem;
+        font-size: 1.5rem !important;
+        line-height: 1.75;
+      }
+    }
+
+      @media (min-width: 768px) {
+        .about-description {
+          font-size: 1.25rem;
+          line-height: 1.75;
         }
       }
 
@@ -172,7 +231,6 @@
           line-height: 1.75;
         }
       }
-
       .image-grid {
         width: 100%;
         display: grid;
@@ -209,6 +267,48 @@
       .image-small {
         height: 11rem;
       }
+
+      @media (min-width: 1920px) {
+  .about-container {
+    max-width: 200rem;
+    padding: 4rem !important;
+    background-size: cover;
+  }
+
+  .text-content {
+    padding: 4rem !important;
+  }
+
+  .about-title {
+    font-size: 3rem !important;
+    line-height: 3rem;
+  }
+      .about-subtitle {
+            font-size: 2.2rem !important;
+        color: #dc2626;
+        font-weight: 700;
+        margin-top: 0.5rem;
+      }
+
+  .about-description {
+    font-size: 3.2rem !important;
+    line-height: 4rem !important;
+  }
+
+  .image-grid {
+    width: 40rem;
+    gap: 2rem;
+  }
+
+  .image-tall {
+    height: 36rem;
+  }
+
+  .image-small {
+    height: 16rem;
+  }
+}
+
       /*our program */
     *, *::before, *::after {
             border: none !important;
@@ -803,7 +903,6 @@
           margin: 0 8rem;
         }
       }
-
       .notice-column {
         display: flex;
         flex-direction: column;
