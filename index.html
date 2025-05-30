@@ -55,14 +55,20 @@
         right: 1rem;
       }
 
-      .marquee-container {
-        background: #073763;
-        color: white;
-        font-size: 0.875rem;
-        padding: 0.5rem 8.9rem;
-        width: 100%;
-        overflow: hidden;
-      }
+  .marquee-container {
+  background: #073763;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.5rem 8.9rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .marquee-container {
+    padding: 0.5rem 1rem;
+  }
+}
 
       .marquee-content {
         overflow: hidden;
