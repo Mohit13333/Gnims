@@ -606,36 +606,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
         color: #0e3c60;
         margin-bottom: 3rem;
       }
-
-      .recruiters-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        justify-items: center;
-      }
-      @media (max-width: 768px) {
-      .recruiters-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-        justify-items: center;
-      }
-
-      }
-      .recruiter-item {
-        border-radius: 0.75rem;
-        width: 7.5rem;
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .recruiter-logo {
-        border-radius: 0.5rem;
-        object-fit: cover;
-      }
-
       /* Highest Package Section */
       .highest-package-section {
         position: relative;
@@ -778,15 +748,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
 
       /* Medium screens */
       @media (min-width: 768px) {
-        .recruiters-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-
-        .recruiter-item {
-          width: 14rem;
-          height: 5rem;
-        }
-
         .highest-package-title {
           font-size: 2.25rem;
           margin-bottom: 6rem;
@@ -828,10 +789,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
 
       /* Large screens */
       @media (min-width: 1024px) {
-        .recruiters-grid {
-          grid-template-columns: repeat(7, 1fr);
-        }
-
         .highest-package-title {
           font-size: 2.25rem;
         }
@@ -847,21 +804,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
           row-gap: 8.5rem;
         }
       }
-      /* Mobile-specific adjustments ONLY */
-      @media (max-width: 767px) {
-        .recruiter-item {
-          width: 5.5rem; /* Only reduced for mobile */
-          height: 3rem; /* Only reduced for mobile */
-          padding: 0.25rem; /* Added padding to ensure spacing */
-        }
-
-        .recruiter-logo {
-          max-width: 90%;
-          max-height: 90%;
-          object-fit: contain;
-        }
-      }
-
       /* Your original PC styling remains completely untouched */
       .recruiters-section {
         padding: 4rem 0;
@@ -874,38 +816,6 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
         text-align: center;
         color: #0e3c60;
         margin-bottom: 3rem;
-      }
-
-      .recruiter-item {
-        border-radius: 0.75rem;
-        width: 7.5rem; /* PC value preserved */
-        height: 4rem; /* PC value preserved */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .recruiter-logo {
-        border-radius: 0.5rem;
-        object-fit: cover; /* PC value preserved */
-      }
-
-      /* All your existing media queries remain exactly the same */
-      @media (min-width: 768px) {
-        .recruiters-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-
-        .recruiter-item {
-          width: 14rem; /* PC value preserved */
-          height: 5rem; /* PC value preserved */
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .recruiters-grid {
-          grid-template-columns: repeat(7, 1fr);
-        }
       }
       /*notice section*/
       .notices-section {
@@ -1720,6 +1630,113 @@ font-family: 'Arial', sans-serif;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         font-size: 0.875rem;
       }
+
+      /*recruiter section*/
+            .recruiters-wrapper {
+        overflow: hidden;
+      }
+      .recruiters-content {
+        display: flex;
+        width: fit-content;
+      }
+      .recruiters-row {
+        display: flex;
+        width: fit-content;
+        animation: scroll-left 40s linear infinite;
+        gap: 2rem;
+        padding-bottom: 2rem;
+      }
+      .recruiters-row.reverse {
+        animation: scroll-right 40s linear infinite;
+      }
+      .recruiter-logo {
+        flex: 0 0 auto;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 5rem;
+      }
+      .recruiter-logo-dark {
+        flex: 0 0 auto;
+        padding: 1rem 2rem;
+        background: rgb(36, 33, 33);
+        border-radius: 10px;
+        margin-top: 1rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 5rem;
+      }
+      .recruiter-logo img {
+        max-height: 3.75rem;
+        max-width: 100%;
+        object-fit: contain;
+      }
+      .recruiter-logo-dark img {
+        max-height: 3.75rem;
+        max-width: 100%;
+        object-fit: contain;
+      }
+        @keyframes scroll-left {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      /* Mobile grid */
+      @media (max-width: 768px) {
+        .recruiters-wrapper {
+          overflow: visible;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.6rem;
+        }
+        .recruiters-content {
+          display: contents;
+        }
+        .recruiters-row {
+          display: contents;
+          animation: none;
+          width: auto;
+          gap: 0;
+          padding-bottom: 0;
+        }
+        .recruiter-logo,
+        .recruiter-logo-dark {
+          width: 100%;
+          height: 100%;
+          flex: none;
+          padding: 0.75rem;
+          margin: 0;
+        }
+        .recruiter-logo img,
+        .recruiter-logo-dark img {
+          max-height: 50px;
+        }
+        .recruiters-row .recruiter-logo:nth-child(n + 8),
+        .recruiters-row .recruiter-logo-dark:nth-child(n + 8) {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1825,8 +1842,73 @@ font-family: 'Arial', sans-serif;
       <!-- our recruiter and package -->
       <section class="recruiters-section">
         <h2 class="recruiters-title">Our Recruiter</h2>
-        <div class="recruiters-grid" id="recruitersGrid"></div>
-      </section>
+  <div class="recruiters-wrapper">
+      <div class="recruiters-content">
+        <div class="recruiters-row">
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/comet_mxxyrx.png" alt="COMET" /></div>
+          <div class="recruiter-logo-dark"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/zudio_ugrxhc.png" alt="Zudio" /></div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/datamatics_tb4svr.png" alt="Datamatics" />
+          </div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/kotak_soov9h.png" alt="Kotak" /></div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/dc_kexwwb.png" alt="DC Consulting" />
+          </div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/bond_lovxxg.png" alt="Bond Bazaar" />
+          </div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/indiamart_jqzfau.png" alt="IndiaMart" />
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/comet_mxxyrx.png" alt="COMET" /></div>
+          <div class="recruiter-logo-dark"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/zudio_ugrxhc.png" alt="Zudio" /></div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/datamatics_tb4svr.png" alt="Datamatics" />
+          </div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/kotak_soov9h.png" alt="Kotak" /></div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/dc_kexwwb.png" alt="DC Consulting" />
+          </div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/bond_lovxxg.png" alt="Bond Bazaar" />
+          </div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/indiamart_jqzfau.png" alt="IndiaMart" />
+          </div>
+        </div>
+      </div>
+      <div class="recruiters-content">
+        <div class="recruiters-row reverse">
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/hallmark_itp0cx.png" alt="Hallmark" />
+          </div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/nec_yyjcvs.png" alt="NEC" /></div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/un_neqpsi.png" alt="un" /></div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/jaro_xy1nun.png" alt="Jaro Education" />
+          </div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/sutherland_om9kdw.png" alt="Sutherland" />
+          </div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/wipro_llwmwr.png" alt="Wipro" /></div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/carwale_llzyy1.png" alt="Carw" /></div>
+          <!-- Duplicate for seamless loop -->
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/hallmark_itp0cx.png" alt="Hallmark" />
+          </div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/nec_yyjcvs.png" alt="NEC" /></div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/un_neqpsi.png" alt="un" /></div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099591/jaro_xy1nun.png" alt="Jaro Education" />
+          </div>
+          <div class="recruiter-logo">
+            <img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/sutherland_om9kdw.png" alt="Sutherland" />
+          </div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/wipro_llwmwr.png" alt="Wipro" /></div>
+          <div class="recruiter-logo"><img src="https://res.cloudinary.com/dty757ahb/image/upload/v1749099590/carwale_llzyy1.png" alt="Carw" /></div>
+        </div>
+      </div>      </section>
 
       <!-- Highest Package Section -->
       <section class="highest-package-section">
@@ -2382,22 +2464,6 @@ function updateCardDisplay(card) {
         renderCards();
 
       // our recruiter and package
-      const recruiters = [
-        { name: "Comet", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748597885/Group_28_fuofvy.png" },
-        { name: "Zudio", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596549/zudio_epajoo.png" },
-        { name: "Datamatics", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596516/datamatics_dpdqzp.png" },
-        { name: "Kotak Life", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596522/kotak_saltbj.png" },
-        { name: "DC Consulting", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596516/dc_zjjxkd.png" },
-        { name: "Bond Bazaar", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596565/bond_kvoe74.png" },
-        { name: "IndiaMart", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596519/indiamart_bqfyob.png" },
-        { name: "Hallmark", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596518/hallmark_gef7sl.png" },
-        { name: "", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596541/un_qxnyiw.png" },
-        { name: "NEC", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596527/nec_kvmk2q.png" },
-        { name: "Jaro Education", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596521/jaro_pmh4rw.png" },
-        { name: "Sutherland", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596538/southerland_ooioau.png" },
-        { name: "Wipro", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748596547/wipro_fa8tg1.png" },
-        { name: "Carwale", logo: "https://res.cloudinary.com/dty757ahb/image/upload/v1748597885/Group_41_xa8lur.png" },
-      ];
 
       const students = [
         {
@@ -2425,24 +2491,6 @@ function updateCardDisplay(card) {
           company: "Zudio",
         },
       ];
-
-      function renderRecruiters() {
-        const recruitersGrid = document.getElementById("recruitersGrid");
-        recruitersGrid.innerHTML = "";
-
-        recruiters.forEach((recruiter, index) => {
-          const recruiterDiv = document.createElement("div");
-          recruiterDiv.className = "recruiter-item";
-          recruiterDiv.innerHTML = `
-                    <img
-                        src="${recruiter.logo}"
-                        alt="${recruiter.name}"
-                        class="recruiter-logo"
-                    />
-                `;
-          recruitersGrid.appendChild(recruiterDiv);
-        });
-      }
 
       function renderStudents() {
         const studentsGrid = document.getElementById("studentsGrid");
@@ -2475,7 +2523,6 @@ function updateCardDisplay(card) {
 
       // Initialize the content when the page loads
       document.addEventListener("DOMContentLoaded", () => {
-        renderRecruiters();
         renderStudents();
       });
       // even section
